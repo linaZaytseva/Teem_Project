@@ -18,12 +18,13 @@ namespace TeemProject
         }
 
         double height, weight, bmi;
-        int code;
+        int age, caloriesNorm;
 
         private void button1_Click(object sender, EventArgs e)
         {
             height = double.Parse(txtBoxHeight.Text);// add exeption
             weight = double.Parse(txtBoxWeight.Text);// add exeption
+            age = int.Parse(txtBoxAge.Text);// add exeption
             //double.TryParse(txtBoxHeight.Text, out height);
             bmi = weight / (height*height);
             bmi = Math.Round(bmi, 2);
@@ -33,23 +34,25 @@ namespace TeemProject
             if (bmi < 18.5)
             {
                 infoString = "You have an underweight.";
-                code = -1;
             }
             else
             {
                 if (bmi <= 25)
                 {
                     infoString = "You have a normal weight.";
-                    code = 0;
                 }
                 else
                 {
                     infoString = "You have an overweight.";
-                    code = 1;
                 }
             }
 
             listBox1.Items.Add(infoString);
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
         
     }

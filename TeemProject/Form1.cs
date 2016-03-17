@@ -22,11 +22,48 @@ namespace TeemProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            height = double.Parse(txtBoxHeight.Text);// add exeption
-            weight = double.Parse(txtBoxWeight.Text);// add exeption
-            age = int.Parse(txtBoxAge.Text);// add exeption
-            //double.TryParse(txtBoxHeight.Text, out height);
+            listBox1.Items.Clear();
+            if (!double.TryParse(txtBoxHeight.Text, out height))//Check, whether entered height is double
+            {
+                MessageBox.Show("Height should be a positive number of double type", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxHeight.Clear();
+                return;
+            }
+            if (!double.TryParse(txtBoxWeight.Text, out weight))//Check, whether entered weight is double
+            {
+                MessageBox.Show("Weight should be a positive number of double type", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxWeight.Clear();
+                return;
+            }
+            if (!int.TryParse(txtBoxAge.Text, out age))//Check, whether entered age is int
+            {
+                MessageBox.Show("Age should be a positive number of integer type", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxAge.Clear();
+                return;
+            }
+ 
+            if (height <= 0)// Check, whether entered height is positive
+            {
+                MessageBox.Show("Height should be a positive number of double type", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxHeight.Clear();
+                return;
+            }
 
+            if (weight <= 0)// Check, whether entered weight is positive
+            {
+                MessageBox.Show("Weight should be a positive number of double type", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxWeight.Clear();
+                return;
+            }
+
+            if (age <= 0)// Check, whether entered age is positive
+            {
+                MessageBox.Show("Age should be a positive number of integer type", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxAge.Clear();
+                return;
+            }
+
+            // Coefficiencies
             if (radioButton1.Checked)
             {
                 coef = 1.2;
@@ -84,13 +121,13 @@ namespace TeemProject
             }
             else
             {
-               if (comboBoxGender.SelectedIndex == 1)
+               if (comboBoxGender.SelectedIndex == 1)// if femail
                {
                     caloriesNorm = (int)(Math.Round(coef * (10 * weight + 6.25 * height - 5 * age - 161)));
                }
                else
                {
-                  MessageBox.Show("Please, choose your gender!");
+                  MessageBox.Show("Please, choose your gender!");// if not chosen
                }                   
             }
             

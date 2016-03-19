@@ -26,7 +26,25 @@ namespace TeemProject.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-
+            context.MealCategory.AddOrUpdate(
+                    p=>p.Name,
+                    new MealCategory { Name = "Beverage"},
+                    new MealCategory { Name = "Poridge" },
+                    new MealCategory { Name = "Toast" },
+                    new MealCategory { Name = "First course" },
+                    new MealCategory { Name = "Second course" },
+                    new MealCategory { Name = "Fruit" },
+                    new MealCategory { Name = "Vegetables" },
+                    new MealCategory { Name = "Salad" }
+                );
+            context.EatingTime.AddOrUpdate(
+                    p=>p.Name,
+                    new EatingTime { Name = "Breakfast"},
+                    new EatingTime { Name = "Lunch" },
+                    new EatingTime { Name = "Dinner" },
+                    new EatingTime { Name = "Afternoon snack" },
+                    new EatingTime { Name = "Supper" }
+                );
         }
     }
 }

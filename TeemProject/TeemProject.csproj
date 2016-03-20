@@ -92,39 +92,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database\MealCategory.cs" />
     <Compile Include="DishRecord.cs" />
-    <Compile Include="Migrations\201603200911284_InitialCreate.cs" />
-    <Compile Include="Migrations\201603200911284_InitialCreate.Designer.cs">
-      <DependentUpon>201603200911284_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603200915307_DishChange.cs" />
-    <Compile Include="Migrations\201603200915307_DishChange.Designer.cs">
-      <DependentUpon>201603200915307_DishChange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603200920456_DishChange_2.cs" />
-    <Compile Include="Migrations\201603200920456_DishChange_2.Designer.cs">
-      <DependentUpon>201603200920456_DishChange_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603200928232_DishChange_3.cs" />
-    <Compile Include="Migrations\201603200928232_DishChange_3.Designer.cs">
-      <DependentUpon>201603200928232_DishChange_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603200930180_DishChange_4.cs" />
-    <Compile Include="Migrations\201603200930180_DishChange_4.Designer.cs">
-      <DependentUpon>201603200930180_DishChange_4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603201100556_A.cs" />
-    <Compile Include="Migrations\201603201100556_A.Designer.cs">
-      <DependentUpon>201603201100556_A.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603201107172_Dishes.cs" />
-    <Compile Include="Migrations\201603201107172_Dishes.Designer.cs">
-      <DependentUpon>201603201107172_Dishes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603201109051_s.cs" />
-    <Compile Include="Migrations\201603201109051_s.Designer.cs">
-      <DependentUpon>201603201109051_s.cs</DependentUpon>
+    <Compile Include="Migrations\201603201216132_InitialCreate.cs" />
+    <Compile Include="Migrations\201603201216132_InitialCreate.Designer.cs">
+      <DependentUpon>201603201216132_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -132,29 +103,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603200911284_InitialCreate.resx">
-      <DependentUpon>201603200911284_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603200915307_DishChange.resx">
-      <DependentUpon>201603200915307_DishChange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603200920456_DishChange_2.resx">
-      <DependentUpon>201603200920456_DishChange_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603200928232_DishChange_3.resx">
-      <DependentUpon>201603200928232_DishChange_3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603200930180_DishChange_4.resx">
-      <DependentUpon>201603200930180_DishChange_4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603201100556_A.resx">
-      <DependentUpon>201603201100556_A.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603201107172_Dishes.resx">
-      <DependentUpon>201603201107172_Dishes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603201109051_s.resx">
-      <DependentUpon>201603201109051_s.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201603201216132_InitialCreate.resx">
+      <DependentUpon>201603201216132_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

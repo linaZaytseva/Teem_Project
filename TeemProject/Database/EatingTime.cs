@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace TeemProject
 {
-    class EatingTime
+    public class EatingTime
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public List<Dish> Dishes { get; set; }
     }
 }

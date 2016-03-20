@@ -11,6 +11,10 @@ namespace TeemProject
     {
         public DbSet<Dish> Dish { get; set; }
         public DbSet<EatingTime> EatingTime { get; set; }
-        public DbSet<MealCategory> MealCategory { get; set; }
+
+        public Context(): base("TeamProject.Context")
+        {
+
+        }
     }
 }

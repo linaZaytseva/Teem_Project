@@ -4,7 +4,6 @@ namespace TeemProject.Migrations
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Globalization;
     using System.IO;
     using System.Linq;
     using System.Reflection;
@@ -33,11 +32,10 @@ namespace TeemProject.Migrations
                         {
                             Name = items[0],
                             KKal = int.Parse(items[1]),
-                            Protein = double.Parse(items[2], CultureInfo.InvariantCulture),
-                            Fat = double.Parse(items[3], CultureInfo.InvariantCulture),
-                            Carbohydrates = double.Parse(items[4], CultureInfo.InvariantCulture),
+                            Protein = double.Parse(items[2]),
+                            Fat = double.Parse(items[3]),
+                            Carbohydrates = double.Parse(items[4]),
                             EatingTime = items[5],
-                            MealCategory = items[6]
                         });
                     }
                 }
@@ -58,23 +56,15 @@ namespace TeemProject.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-
             var data = LoadDishesFromCSV("TeamProject.DataProject.csv");
             foreach (var item in data)
             {
-                var eTime = new EatingTime
+                foreach (var eatingTime in item.EatingTime)
                 {
-                    Name = item.EatingTime
-                };
-                context.EatingTime.AddOrUpdate(e => e.Name,
-                    eTime);
-                context.SaveChanges();
+                    var eat = new EatingTime { Name = eatingTime.ToString() };
+                    context.EatingTime.AddOrUpdate(c => c.Name, eat);
+                }
 
-                var mCat = new MealCategory
-                {
-                    Name = item.MealCategory
-                };
-                context.MealCategory.AddOrUpdate(m => m.Name, mCat);
                 context.SaveChanges();
                 var dish = new Dish
                 {
@@ -83,12 +73,13 @@ namespace TeemProject.Migrations
                     Protein = item.Protein,
                     Fat = item.Fat,
                     Carbohydrate = item.Carbohydrates,
-                    EatingTime = context.EatingTime.Single(e => e.Name == item.EatingTime),
-                    MealCategory = context.MealCategory.Single(m => m.Name == item.MealCategory)
+                    EatingTimes = context.EatingTime.Where(c => item.EatingTime.Contains(c.Name)).ToList()
                 };
-                context.Dish.AddOrUpdate(d => new { d.EatingTime, d.MealCategory }, dish);
+                context.Dish.AddOrUpdate(d => new { d.Name, d.KKal, d.Protein, d.Fat, d.Carbohydrate}, dish);
                 context.SaveChanges();
             }
         }
     }
+
 }
+

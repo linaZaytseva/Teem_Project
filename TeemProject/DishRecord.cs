@@ -14,6 +14,5 @@ namespace TeemProject.Migrations
         public double Fat { get; set; }
         public double Carbohydrates { get; set; }
         public string EatingTime { get; set; }
-        public string MealCategory { get; set; }
     }
 }

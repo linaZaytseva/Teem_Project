@@ -45,6 +45,9 @@ namespace TeemProject.Migrations
                     new EatingTime { Name = "Afternoon snack" },
                     new EatingTime { Name = "Supper" }
                 );
+            context.Dish.AddOrUpdate(
+                    
+                );
         }
     }
 }

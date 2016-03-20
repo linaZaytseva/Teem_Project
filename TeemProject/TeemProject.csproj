@@ -93,9 +93,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\MealCategory.cs" />
-    <Compile Include="Migrations\201603191625233_InitialCreate.cs" />
-    <Compile Include="Migrations\201603191625233_InitialCreate.Designer.cs">
-      <DependentUpon>201603191625233_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201603200010528_InitialCreate.cs" />
+    <Compile Include="Migrations\201603200010528_InitialCreate.Designer.cs">
+      <DependentUpon>201603200010528_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -103,8 +103,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603191625233_InitialCreate.resx">
-      <DependentUpon>201603191625233_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201603200010528_InitialCreate.resx">
+      <DependentUpon>201603200010528_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

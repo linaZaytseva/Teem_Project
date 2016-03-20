@@ -13,7 +13,7 @@ namespace TeemProject.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201603191625233_InitialCreate"; }
+            get { return "201603200010528_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

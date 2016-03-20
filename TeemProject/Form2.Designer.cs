@@ -28,11 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnBreakfast = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnBreakfast
+            // 
+            this.btnBreakfast.Location = new System.Drawing.Point(21, 28);
+            this.btnBreakfast.Name = "btnBreakfast";
+            this.btnBreakfast.Size = new System.Drawing.Size(75, 23);
+            this.btnBreakfast.TabIndex = 0;
+            this.btnBreakfast.Text = "Breakfast";
+            this.btnBreakfast.UseVisualStyleBackColor = true;
+            this.btnBreakfast.Click += new System.EventHandler(this.btnBreakfast_Click);
+            // 
+            // Form2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnBreakfast);
+            this.Name = "Form2";
             this.Text = "Form2";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnBreakfast;
     }
 }

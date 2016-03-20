@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace TeemProject
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2(int data)
+        public Form3()
         {
             InitializeComponent();
-            caloriesNorm = data;
-        }
-
-        int caloriesNorm;
-
-        private void btnBreakfast_Click(object sender, EventArgs e)
-        {
-            Form3 f = new Form3();
-            f.ShowDialog();
         }
     }
 }

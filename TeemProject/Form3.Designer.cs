@@ -35,20 +35,22 @@
             // dGV
             // 
             this.dGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGV.Location = new System.Drawing.Point(21, 12);
+            this.dGV.Location = new System.Drawing.Point(28, 15);
+            this.dGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dGV.Name = "dGV";
             this.dGV.ShowEditingIcon = false;
-            this.dGV.Size = new System.Drawing.Size(619, 150);
+            this.dGV.Size = new System.Drawing.Size(882, 271);
             this.dGV.TabIndex = 0;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 261);
+            this.ClientSize = new System.Drawing.Size(942, 321);
             this.Controls.Add(this.dGV);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Diet Building";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGV)).EndInit();
             this.ResumeLayout(false);

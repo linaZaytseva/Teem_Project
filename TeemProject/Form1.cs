@@ -161,6 +161,14 @@ namespace TeemProject
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form2 f = new Form2(caloriesNorm);
+            f.ShowDialog();
+            Close();
+        }
         
     }
 }

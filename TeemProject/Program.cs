@@ -82,7 +82,7 @@ namespace TeemProject
             Dish d51 = new Dish("Селёдка под шубой", 189, 5.03, 15.75, 7.21, sld);
             Dish d52 = new Dish("Морковь по - корейски", 107, 0.78, 7.93, 9.05, sld);
             Dish d53 = new Dish("Винегрет", 98, 0.77, 8.36, 5.35, sld);
-
+            
         }
     }
     }

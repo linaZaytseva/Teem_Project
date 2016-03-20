@@ -14,16 +14,16 @@ namespace TeemProject
         public double Protein { get; set; }
         public double Fat { get; set; }
         public double Carbohydrate { get; set; }
-        public EatingTime EatingTimes { get; set; }
+        public MealCategory MealCategories { get; set; }
 
-        public Dish(string Name, int KKal, double Protein, double Fat, double Carbohydrate, EatingTime EatingTimes)
+        public Dish(string Name, int KKal, double Protein, double Fat, double Carbohydrate, MealCategory MealCategories)
         {
             this.Name = Name;
             this.KKal = KKal;
             this.Protein = Protein;
             this.Fat = Fat;
             this.Carbohydrate = Carbohydrate;
-            this.EatingTimes = EatingTimes;
+            this.MealCategories = MealCategories;
         }
     }
 }

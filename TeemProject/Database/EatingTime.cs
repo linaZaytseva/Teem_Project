@@ -10,10 +10,5 @@ namespace TeemProject
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
-        public EatingTime(string Name)
-        {
-            this.Name = Name;
-        }
     }
 }

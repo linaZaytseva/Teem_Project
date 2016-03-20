@@ -93,6 +93,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="DishRecord.cs" />
+    <Compile Include="Database\MealCategory.cs" />
     <Compile Include="Migrations\201603201216132_InitialCreate.cs" />
     <Compile Include="Migrations\201603201216132_InitialCreate.Designer.cs">
       <DependentUpon>201603201216132_InitialCreate.cs</DependentUpon>

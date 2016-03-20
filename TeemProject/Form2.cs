@@ -22,6 +22,7 @@ namespace TeemProject
         List<Dish> Dishes = new List<Dish>();
         int caloriesNorm;
         List<String> typeList = new List<string>();
+        int avaliableCalories = 0;
 
         // Method for avaliable meal generation
         List<Dish> MakeList(List<String> list)
@@ -43,7 +44,8 @@ namespace TeemProject
             typeList.Add("Beverage");
             typeList.Add("Poridge&Breakfast");
             typeList.Add("Fruit");
-            Form3 f = new Form3(MakeList(typeList));
+            avaliableCalories = (int)(Math.Round(0.25 * caloriesNorm));
+            Form3 f = new Form3(MakeList(typeList), avaliableCalories);
             f.ShowDialog();
         }
 
@@ -53,7 +55,8 @@ namespace TeemProject
             typeList.Add("Beverage");
             typeList.Add("Toast");
             typeList.Add("Fruit");
-            Form3 f = new Form3(MakeList(typeList));
+            avaliableCalories = (int)(Math.Round(0.1 * caloriesNorm));
+            Form3 f = new Form3(MakeList(typeList), avaliableCalories);
             f.ShowDialog();
         }
 
@@ -64,7 +67,8 @@ namespace TeemProject
             typeList.Add("First Course");
             typeList.Add("Garnish");
             typeList.Add("Entree");
-            Form3 f = new Form3(MakeList(typeList));
+            avaliableCalories = (int)(Math.Round(0.32 * caloriesNorm));
+            Form3 f = new Form3(MakeList(typeList), avaliableCalories);
             f.ShowDialog();
         }
 
@@ -75,7 +79,8 @@ namespace TeemProject
             typeList.Add("Salad");
             typeList.Add("Toast");
             typeList.Add("Vegetables");
-            Form3 f = new Form3(MakeList(typeList));
+            avaliableCalories = (int)(Math.Round(0.12 * caloriesNorm));
+            Form3 f = new Form3(MakeList(typeList), avaliableCalories);
             f.ShowDialog();
         }
 
@@ -84,10 +89,11 @@ namespace TeemProject
             typeList.Clear();
             typeList.Add("Beverage");
             typeList.Add("Salad");
-            typeList.Add("Garnish");
+            //typeList.Add("Garnish");
             typeList.Add("Entree");
             typeList.Add("Vegetables");
-            Form3 f = new Form3(MakeList(typeList));
+            avaliableCalories = (int)(Math.Round(0.18 * caloriesNorm));
+            Form3 f = new Form3(MakeList(typeList), avaliableCalories);
             f.ShowDialog();
         }
     }

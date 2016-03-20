@@ -29,26 +29,37 @@
         private void InitializeComponent()
         {
             this.dGV = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGV)).BeginInit();
             this.SuspendLayout();
             // 
             // dGV
             // 
             this.dGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGV.Location = new System.Drawing.Point(28, 15);
-            this.dGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dGV.Location = new System.Drawing.Point(21, 12);
             this.dGV.Name = "dGV";
             this.dGV.ShowEditingIcon = false;
-            this.dGV.Size = new System.Drawing.Size(882, 271);
+            this.dGV.Size = new System.Drawing.Size(662, 220);
             this.dGV.TabIndex = 0;
+            this.dGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_CellClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(299, 252);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Finish this meal";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 321);
+            this.ClientSize = new System.Drawing.Size(706, 296);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dGV);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form3";
             this.Text = "Diet Building";
             this.Load += new System.EventHandler(this.Form3_Load);
@@ -60,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dGV;
+        private System.Windows.Forms.Button button1;
     }
 }

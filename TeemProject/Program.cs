@@ -87,5 +87,10 @@ namespace TeemProject
 
             Application.Run(new Form1(Dishes));
         }
+        
+    }
+    static class Data
+    {
+        public static string Value { get; set; }
     }
     }

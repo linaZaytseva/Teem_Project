@@ -14,7 +14,11 @@ namespace TeemProject
         public double Protein { get; set; }
         public double Fat { get; set; }
         public double Carbohydrate { get; set; }
+
         public EatingTime EatingTime { get; set; }
+        public int EatingTimeId { get; set; }
+        
         public MealCategory MealCategory { get; set; }
+        public int MealCategoryId { get; set; }
     }
 }

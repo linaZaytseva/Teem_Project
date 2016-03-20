@@ -168,10 +168,13 @@ namespace TeemProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Hide();
-            Form2 f = new Form2(caloriesNorm, Dishes);
-            f.ShowDialog();
-            Close();
+            if (caloriesNorm != 0)
+            {
+                Hide();
+                Form2 f = new Form2(caloriesNorm, Dishes);
+                f.ShowDialog();
+                Close();
+            }
         }
         
     }

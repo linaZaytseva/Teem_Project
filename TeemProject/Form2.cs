@@ -56,5 +56,39 @@ namespace TeemProject
             Form3 f = new Form3(MakeList(typeList));
             f.ShowDialog();
         }
+
+        private void btnDinner_Click(object sender, EventArgs e)
+        {
+            typeList.Clear();
+            typeList.Add("Beverage");
+            typeList.Add("First Course");
+            typeList.Add("Garnish");
+            typeList.Add("Entree");
+            Form3 f = new Form3(MakeList(typeList));
+            f.ShowDialog();
+        }
+
+        private void btnAfternoonSnack_Click(object sender, EventArgs e)
+        {
+            typeList.Clear();
+            typeList.Add("Beverage");
+            typeList.Add("Salad");
+            typeList.Add("Toast");
+            typeList.Add("Vegetables");
+            Form3 f = new Form3(MakeList(typeList));
+            f.ShowDialog();
+        }
+
+        private void btnSupper_Click(object sender, EventArgs e)
+        {
+            typeList.Clear();
+            typeList.Add("Beverage");
+            typeList.Add("Salad");
+            typeList.Add("Garnish");
+            typeList.Add("Entree");
+            typeList.Add("Vegetables");
+            Form3 f = new Form3(MakeList(typeList));
+            f.ShowDialog();
+        }
     }
 }

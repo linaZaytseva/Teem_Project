@@ -14,12 +14,15 @@ namespace TeemProject
         [STAThread]
         static void Main()
         {
+            List<Dish> Dishes = new List<Dish>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            
+            //Application.Run(new Form1());
 
-            MealCategory bev = new MealCategory("Beverage");
-            MealCategory por = new MealCategory("Poridge&Breakfast");
+            MealCategory bev = new MealCategory("Beverage");// Напитки
+            MealCategory por = new MealCategory("Poridge&Breakfast");// Каша и завтраки
             MealCategory fru = new MealCategory("Fruit");
             MealCategory veg = new MealCategory("Vegetables");
             MealCategory fc = new MealCategory("First Course");
@@ -28,9 +31,7 @@ namespace TeemProject
             MealCategory sld = new MealCategory("Salad");
             MealCategory tst = new MealCategory("Toast");
 
-            List<Dish> Dishes = new List<Dish>();
-
-            Dishes.Add(new Dish("Гречневая каша", 228, 8.6, 5.16, 40.21, por ));
+            Dishes.Add(new Dish("Гречневая каша", 228, 8.6, 5.16, 40.21, por));
             Dishes.Add(new Dish("Манная каша", 234, 7.3, 6.54, 36.51, por));
             Dishes.Add(new Dish("Овсяная каша", 244, 9.24, 8.63, 34.14, por));
             Dishes.Add(new Dish("Рисовая каша", 232, 5.06, 5.99, 39.06, por));
@@ -58,7 +59,7 @@ namespace TeemProject
             Dishes.Add(new Dish("Пюре на воде", 105, 1.89, 3.72, 16.51, gar));
             Dishes.Add(new Dish("Чай с сахаром", 47, 0.02, 0, 12.51, bev));
             Dishes.Add(new Dish("Чай с лимоном", 4, 0.24, 0, 1.09, bev));
-            Dishes.Add(new Dish("Зелёный чай", 2, 0,0, 0.47, bev));
+            Dishes.Add(new Dish("Зелёный чай", 2, 0, 0, 0.47, bev));
             Dishes.Add(new Dish("Кофе с сахаром и молоком", 41, 0.42, 0.19, 9.56, bev));
             Dishes.Add(new Dish("Молоко 3,2 %", 59, 2.9, 3.2, 4.7, bev));
             Dishes.Add(new Dish("Кефир 1 %", 37, 3, 1, 4, bev));
@@ -84,6 +85,7 @@ namespace TeemProject
             Dishes.Add(new Dish("Морковь по - корейски", 107, 0.78, 7.93, 9.05, sld));
             Dishes.Add(new Dish("Винегрет", 98, 0.77, 8.36, 5.35, sld));
 
+            Application.Run(new Form1(Dishes));
         }
     }
     }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnBreakfast = new System.Windows.Forms.Button();
+            this.btnLunch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBreakfast
@@ -41,11 +42,22 @@
             this.btnBreakfast.UseVisualStyleBackColor = true;
             this.btnBreakfast.Click += new System.EventHandler(this.btnBreakfast_Click);
             // 
+            // btnLunch
+            // 
+            this.btnLunch.Location = new System.Drawing.Point(122, 28);
+            this.btnLunch.Name = "btnLunch";
+            this.btnLunch.Size = new System.Drawing.Size(75, 23);
+            this.btnLunch.TabIndex = 1;
+            this.btnLunch.Text = "Lunch";
+            this.btnLunch.UseVisualStyleBackColor = true;
+            this.btnLunch.Click += new System.EventHandler(this.btnLunch_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnLunch);
             this.Controls.Add(this.btnBreakfast);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnBreakfast;
+        private System.Windows.Forms.Button btnLunch;
     }
 }

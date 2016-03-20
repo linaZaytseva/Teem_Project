@@ -12,16 +12,20 @@ namespace TeemProject
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(List<Dish> data)
         {
             InitializeComponent();
+            Dishes = data;
         }
 
         double height, weight, bmi, coef;
         int age, caloriesNorm;
+        List<Dish> Dishes = new List<Dish>();
 
+            
         private void button1_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show(Dishes[0].Name);
             listBox1.Items.Clear();
             if (!double.TryParse(txtBoxHeight.Text, out height))//Check, whether entered height is double
             {
@@ -165,7 +169,7 @@ namespace TeemProject
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
-            Form2 f = new Form2(caloriesNorm);
+            Form2 f = new Form2(caloriesNorm, Dishes);
             f.ShowDialog();
             Close();
         }

@@ -56,28 +56,27 @@ namespace TeemProject.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            var data = LoadDishesFromCSV("TeamProject.DataProject.csv");
-            foreach (var item in data)
-            {
-                foreach (var eatingTime in item.EatingTime)
-                {
-                    var eat = new EatingTime { Name = eatingTime.ToString() };
-                    context.EatingTime.AddOrUpdate(c => c.Name, eat);
-                }
-
-                context.SaveChanges();
-                var dish = new Dish
-                {
-                    Name = item.Name,
-                    KKal = item.KKal,
-                    Protein = item.Protein,
-                    Fat = item.Fat,
-                    Carbohydrate = item.Carbohydrates,
-                    EatingTimes = context.EatingTime.Where(c => item.EatingTime.Contains(c.Name)).ToList()
-                };
-                context.Dish.AddOrUpdate(d => new { d.Name, d.KKal, d.Protein, d.Fat, d.Carbohydrate}, dish);
-                context.SaveChanges();
-            }
+            //var data = LoadDishesFromCSV("TeamProject.DataProject.csv");
+            //foreach (var item in data)
+            //{
+            //   var eTime = new EatingTime
+            //    {
+            //        Name = item.Name
+            //    };
+            //    context.EatingTime.AddOrUpdate(e => e.Name, eTime);
+            //    context.SaveChanges();
+            //    var dish = new Dish
+            //    {
+            //        Name = item.Name,
+            //       KKal = item.KKal,
+            //        Protein = item.Protein,
+            //        Fat = item.Fat,
+            //        Carbohydrate = item.Carbohydrates,
+            //        EatingTimes = context.EatingTime.Single(d => d.Name == item.EatingTime)
+            //    };
+            //    context.Dish.AddOrUpdate(d => new { d.Name, d.KKal, d.Protein, d.Fat, d.Carbohydrate}, dish);
+            //    context.SaveChanges();
+           // }
         }
     }
 

@@ -1,6 +1,6 @@
 Name;Kkal;Protein;Fat;Carbohydrate;EatingTime
 Гречневая каша;228;8,6;5,16;40,21;Breakfast
-Манная каша;234;7,3;6,54;36,51;Breakfast
+Манная каша;234;7,3;6,54;36,51,Breakfast
 Овсяная каша;244;9,24;8,63;34,14;Breakfast
 Рисовая каша;232;5,06;5,99;39,06;Breakfast
 Щи с мясом;120;9,58;6,28;6,89;Dinner

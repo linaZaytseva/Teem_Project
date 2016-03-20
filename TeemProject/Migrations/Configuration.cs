@@ -58,6 +58,7 @@ namespace TeemProject.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
             var data = LoadDishesFromCSV("TeamProject.DataProject.csv");
             foreach (var item in data)
             {

@@ -114,6 +114,18 @@
     <Compile Include="Migrations\201603200930180_DishChange_4.Designer.cs">
       <DependentUpon>201603200930180_DishChange_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603201100556_A.cs" />
+    <Compile Include="Migrations\201603201100556_A.Designer.cs">
+      <DependentUpon>201603201100556_A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603201107172_Dishes.cs" />
+    <Compile Include="Migrations\201603201107172_Dishes.Designer.cs">
+      <DependentUpon>201603201107172_Dishes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603201109051_s.cs" />
+    <Compile Include="Migrations\201603201109051_s.Designer.cs">
+      <DependentUpon>201603201109051_s.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,6 +147,15 @@
     <EmbeddedResource Include="Migrations\201603200930180_DishChange_4.resx">
       <DependentUpon>201603200930180_DishChange_4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603201100556_A.resx">
+      <DependentUpon>201603201100556_A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603201107172_Dishes.resx">
+      <DependentUpon>201603201107172_Dishes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603201109051_s.resx">
+      <DependentUpon>201603201109051_s.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -144,6 +165,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataProject.csv" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
